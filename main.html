@@ -46,6 +46,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -106,24 +107,27 @@
         </h1>
         <hr />
         <p class="lead">
-          🌄 Quote of the day: <span id="quote"> Quote goes here </span>
+          🌄 Quote of the day:
+          <span id="quote" class="tw-text-red-500"> Quote goes here </span>
         </p>
+        <div id="header-card" style="width:300px;">
+          <!-- Image Section -->
+          <div class="text-center mt-4" style="">
+            <img
+              style="max-width: 300px"
+              src="https://images.unsplash.com/photo-1458442310124-dde6edb43d10?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGlraW5nfGVufDB8fDB8fHww"
+              class="rounded-lg shadow-lg"
+              alt="Hiking adventure"
+            />
+          </div>
 
-        <!-- Image Section -->
-        <div class="text-center my-4">
-          <img
-            src="https://images.unsplash.com/photo-1458442310124-dde6edb43d10?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGlraW5nfGVufDB8fDB8fHww"
-            class="img-fluid rounded"
-            alt="Hiking adventure"
-          />
-        </div>
-
-        <!-- Small Card Section -->
-        <div class="card shadow-sm mt-4">
-          <div class="card-body">
-            <h5 class="card-title">🔥 Hiking Tip of the Day</h5>
-            <p class="card-text">Always carry enough water & snacks.</p>
-            <a href="#" class="btn btn-success">More Hiking Tips</a>
+          <!-- Small Card Section -->
+          <div class="bg-white shadow-md rounded-lg p-2 flex-1">
+            <h5 class="text-xl font-semibold">🔥 Hiking Tip of the Day</h5>
+            <p class="text-gray-700 mt-2">
+              Always carry enough water & snacks.
+            </p>
+        
           </div>
         </div>
       </div>
