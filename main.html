@@ -77,8 +77,28 @@
     <!-------------------------------------------->
     <!-- Other libraries and styles of your own -->
     <!-------------------------------------------->
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./styles/style.css" />
+    <style>
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .header > p {
+          margin-top: 10px;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -101,37 +121,77 @@
       </div>
     </div> -->
     <div class="container-fluid bg-light text-dark p-2">
-      <div class="container bg-light p-5">
+      <div class="container bg-light px-5">
         <h1 class="display-2">
           Good morning, <span id="name-goes-here"></span>
         </h1>
         <hr />
-        <p class="lead">
-          🌄 Quote of the day:
-          <span id="quote" class="tw-text-red-500"> Quote goes here </span>
-        </p>
-        <div id="header-card" style="width:300px;">
-          <!-- Image Section -->
-          <div class="text-center mt-4" style="">
-            <img
-              style="max-width: 300px"
-              src="https://images.unsplash.com/photo-1458442310124-dde6edb43d10?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGlraW5nfGVufDB8fDB8fHww"
-              class="rounded-lg shadow-lg"
-              alt="Hiking adventure"
-            />
-          </div>
+        <div
+          class="header mt-4"
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          "
+        >
+          <p class="lead" style="margin-right: 15px">
+            🌄 Quote of the day:
+            <span id="quote" class="tw-text-red-500"> Quote goes here </span>
+          </p>
+          <div id="header-card " style="border-radius: 15px">
+            <!-- Image Section -->
+            <div
+              class="text-center"
+              style="max-height: 150px; overflow: hidden"
+            >
+              <img
+                style="width: 100%"
+                src="https://images.unsplash.com/photo-1458442310124-dde6edb43d10?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGlraW5nfGVufDB8fDB8fHww"
+                class="rounded-lg shadow-lg"
+                alt="Hiking adventure"
+              />
+            </div>
 
-          <!-- Small Card Section -->
-          <div class="bg-white shadow-md rounded-lg p-2 flex-1">
-            <h5 class="text-xl font-semibold">🔥 Hiking Tip of the Day</h5>
-            <p class="text-gray-700 mt-2">
-              Always carry enough water & snacks.
-            </p>
-        
+            <!-- Small Card Section -->
+            <div class="bg-white shadow-md rounded-lg p-2 flex-1">
+              <h5 class="text-xl font-semibold">🔥 Hiking Tip of the Day</h5>
+              <p class="text-gray-700 mt-2">
+                Always carry enough water & snacks.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <main>
+      <div class="container">
+        <h1>Some popular hikes</h1>
+        <!-- Here is the container for cards  -->
+        <div class="container">
+          <div id="hikes-go-here" class="row row-cols-auto">
+            <!-- Templates for general use, not displayed -->
+            <template id="hikeCardTemplate">
+              <div class="card py-2 mx-2" style="width: 18rem">
+                <img class="card-image card-img-top" src=" ..." alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-length">placeholder</p>
+                  <br />
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a class="btn btn-primary card-href">Read more ...</a>
+                  <i class="material-icons-outlined bookmark">
+                    bookmark_border
+                  </i>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <!-- our own footer goes here-->
     <nav id="footerPlaceholder"></nav>
